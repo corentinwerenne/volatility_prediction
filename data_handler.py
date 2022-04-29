@@ -6,8 +6,20 @@ Created on Wed Apr 13 10:08:22 2022
 @author: Corentin Werenne
 """
 
-import yfinance as yf
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+import yfinance as yf
+import datetime as dt
+
+from sklearn.metrics import mean_squared_error as mse
+from sklearn.metrics import mean_absolute_error as mae
+from scipy import stats
+from arch import arch_model
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.stattools import acf, q_stat, adfuller
+from scipy.stats import probplot, moment
 
 def get_sp500_ticker_list():
     """
@@ -40,4 +52,6 @@ def sp500_closes_to_csv(start, end, interval):
     ticker_list = get_sp500_ticker_list()
     adj_closes = get_adj_close(ticker_list, start, end, interval)
     adj_closes.to_csv('sp500_ajdclose.csv')
+
+
     
