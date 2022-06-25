@@ -5,7 +5,5 @@ Will try:
 - GARCH
 - EGARCH
 - GJR-GARCH
-- Support vector regression
 - Neural networks
-- Markov chains
-- Metropolis-Hastings
+
