@@ -1,1 +1,9 @@
-Time series class project: Volatility prediction
+Project on volatility prediction:
+
+Will try:
+- ARCH
+- GARCH
+- EGARCH
+- GJR-GARCH
+- Neural networks
+
